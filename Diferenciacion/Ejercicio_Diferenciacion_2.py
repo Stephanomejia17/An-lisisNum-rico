@@ -1,26 +1,29 @@
 import numpy as np
 import sympy as sp
 import matplotlib.pyplot as plt
-from math import factorial
 import pandas as pd
 
 h=0.1
 c=15
-g=-9.81
+g=9.8
 masa=68.1
 
 t=[0]
 x=[0]
 v_analitica = [0]
 m=68.1
-
+switch = 0
 info = [[0,0,0,0]]
+t_impacto = 0
 
 while True:
-    if t[-1] >= 12:
+    if t[-1] >= 3000:
         break
     else:
         x.append(h*(g-(c/m)*x[-1])+x[-1])
+        if ((round(x[-1], 2) - round(x[-2], 2)) == 0) and switch == 0:
+            t_impacto = t[-1]
+            switch = 1
         t.append(t[-1]+h)
         v_analitica.append(((g*m)/c)*(1 - np.exp(-(c/m)*t[-1])))
         
@@ -28,11 +31,14 @@ while True:
 
 
         info.append([t[-1], x[-1], v_analitica[-1], error_abs])
+        
+        
 
         
 d = pd.DataFrame(data=info, columns=['Tiempo (s)', 'Velocidad Aproximada (m/s)', 'Velocidad Analítica (m/s)', 'Error Absoluto'])
 
 print(d)
+print("Aproximadamente el paracaidista se impactó a los ", t_impacto, " segundos")
 
 fig, ax = plt.subplots(3, 1, figsize=(8, 6))  # 2 filas, 1 columna
 
