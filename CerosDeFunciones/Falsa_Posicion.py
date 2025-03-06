@@ -20,7 +20,7 @@ def Falsa_posicion(f, a, b, tol, particiones = 0):
                 b = p
         return p, i
     
-f= lambda x: x**10 - 1
+"""f= lambda x: x**10 - 1
 root = Falsa_posicion(f,0,1.5,1e-8)
 
-print('La solución es: ', root, 'funcion evaluada', f(root[0]), 'cantidad de iteraciones : ', root[1]) # 1e-2 = 10^(-2)
+print('La solución es: ', root, 'funcion evaluada', f(root[0]), 'cantidad de iteraciones : ', root[1]) # 1e-2 = 10^(-2)"""

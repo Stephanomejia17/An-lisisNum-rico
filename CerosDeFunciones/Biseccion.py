@@ -16,7 +16,7 @@ def Biseccion(f, a, b, tol, particiones = 0):
                 b = p
         return p, particiones
     
-f= lambda x: (3**(-x))-x
+"""f= lambda x: (3**(-x))-x
 root = Biseccion(f,0,1,1e-8)
 
-print('La solución es: ', root, 'funcion evaluada', f(root[0]), 'cantidad de iteraciones : ', root[1]) # 1e-2 = 10^(-2)
+print('La solución es: ', root, 'funcion evaluada', f(root[0]), 'cantidad de iteraciones : ', root[1]) # 1e-2 = 10^(-2)"""
