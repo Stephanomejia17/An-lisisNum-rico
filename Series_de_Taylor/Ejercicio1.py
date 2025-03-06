@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from math import factorial
 import pandas as pd
-from Cota import cota
+from Series_de_Taylor.Ejercicio_Cota import cota
 
 x = sp.symbols('x')
 lista = [3]
@@ -38,9 +38,9 @@ for i in lista:
 d = pd.DataFrame(data=info, columns=['Grado de derivada', 'X', 'P(X)', 'F(X)', 'Ea=|P(X)-f(X)|', 'Er', 'Eap (%)', 'Erp (%)'])
 print("\n", d)
 
-info = cota(f, 0)
-print(info)
-d = pd.DataFrame(data=info, columns=['Maximo', 'R_x'])
+cota_func = cota(f, 0)
+print(cota_func)
+d = pd.DataFrame(data=cota_func, columns=['Maximo', 'R_x'])
 
 
 print(d)

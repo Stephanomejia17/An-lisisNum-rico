@@ -1,0 +1,22 @@
+import sympy as sp
+from Serie_Taylor_Funcion import Taylor
+from Cota import Cota_de_Error
+import numpy as np
+
+x = sp.symbols('x')
+f = sp.exp(2*x)* sp.cos(2*x)
+x0 = 0
+
+
+res = Taylor(f, 3, x0)
+print("Polinomio de grado ", 3, ": ", res)
+
+cota_error = Cota_de_Error(f, x, x0, 0.5, 3)
+
+res = sp.lambdify(x, res)
+f = sp.lambdify(x,f)
+print("(1): ", res(1), "(4.5): ", res(4.5))
+print("(1): ", f(1), "(4.5): ", f(4.5))
+print("Cota de error: ", cota_error[0])
+print("Error relativo: ", abs((f(1)-res(1))/f(1)))
+print("Error absoluto: ", abs((f(1)-res(1))))

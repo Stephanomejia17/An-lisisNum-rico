@@ -4,8 +4,7 @@ import matplotlib.pyplot as plt
 import math
 
 x = sp.symbols('x')
-f = sp.log(x**2 + 1)
-x0 = 0
+
 
 def Taylor (f, grado, x0):
     P = f.evalf(subs={x:x0})
