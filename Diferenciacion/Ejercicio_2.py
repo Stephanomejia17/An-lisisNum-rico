@@ -1,31 +1,25 @@
-t = [0, 2, 4, 6, 8, 10, 12, 14, 16]
-p = [0, 0.7, 1.8, 3.4, 5.1, 6.3, 7.3, 8, 8.4]
+import numpy as np
+import matplotlib.pyplot as plt
 
-h = 2
-v = []
-a = []
+x = np.array([1.2,1.29,1.3,1.31,1.4])
+f = np.array([11.59006, 13.78176, 14.04276, 14.30741, 16.86187])
 
+x0 = 1.3
 
-print("\nVelocidad:\n")
+h = 0.1
 
-for i, valor in enumerate(p):
-    if i == len(p)-1:
-        v.append((p[i]-p[i-1])/h)
-        break
-    else:
-        v.append((p[i+1]-p[i])/h)
+print("1. ", (f[4] - f[2])/h)
 
-for i, value in enumerate(t):
-    print("Velocidad en tiempo ", value, ": ", v[i])
+h = 0.01
 
+print("2. ", (f[3] - f[2])/h)
 
-for i, valor in enumerate(v):
-    if i == len(v)-1:
-        a.append((v[i]-v[i-1])/h)
-        break
-    else:
-        a.append((v[i+1]-v[i])/h)
-        
-print("\nAceleración:\n")
-for i, value in enumerate(t):
-    print("Aceleración en tiempo ", value, ": ", a[i])
+h = 0.1
+
+print("3. ", (f[4] - f[0])/(2*h))
+
+h = 0.01
+
+print("4. ", (f[3] - f[1])/(2*h))
+
+print("\nValor real: ", 26.28170519)
