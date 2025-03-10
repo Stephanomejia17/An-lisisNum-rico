@@ -10,3 +10,4 @@ def truncate(number, digits) -> float:
     return math.trunc(stepper * number) / stepper
 
 print(x, truncate(x, 5))
+
