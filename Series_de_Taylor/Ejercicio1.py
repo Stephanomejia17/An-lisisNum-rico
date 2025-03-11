@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from math import factorial
 import pandas as pd
-from Series_de_Taylor.Ejercicio_Cota import cota
+from Ejercicio_Cota import cota
 
 x = sp.symbols('x')
 lista = [3]
