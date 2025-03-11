@@ -16,7 +16,7 @@ def serie_taylor(f, x0, n):
     for i in range(n+1):
         df=sp.diff(f,x,i)
         dfe = df.evalf(subs={x:x0})
-        P+=dfe*(x-x0)**i/factorial(i)
+        P+=(dfe*(x-x0)**i)/factorial(i)
     
     return sp.expand(P)
 
