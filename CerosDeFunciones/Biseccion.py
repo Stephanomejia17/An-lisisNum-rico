@@ -6,7 +6,6 @@ def Biseccion(f, a, b, tol, particiones = 0):
         print("La función no cumple el teorema en el intervalo [", a, ", ", b, "] ")
         
     else:
-        print("Buscando")
         while (abs(b-a) > tol):
             particiones += 1
             p = (a+b)/2

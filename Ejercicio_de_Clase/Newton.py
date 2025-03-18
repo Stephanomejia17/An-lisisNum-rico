@@ -50,12 +50,9 @@ def Newton(f, x, x0, tol, iteraciones = 0):
     x1 = (x0 - f.evalf(subs={x:x0})/df.evalf(subs={x:x0}))
     
     while abs(x1 - x0) > tol:
-        print(x0, x1, abs(x0-x1))
-
         x0 = x1
         x1 = (x0 - f.evalf(subs={x:x0})/df.evalf(subs={x:x0}))
         iteraciones += 1
-    print(x0, x1, abs(x0-x1))
 
     return x1, iteraciones
     

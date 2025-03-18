@@ -18,11 +18,9 @@ bisecc = Biseccion(f,0, 2, tol)
 falsa = Falsa_posicion(f, 0, 2, tol)
 new = Newton(f_x, x, 1, tol)
 
-print("Biseccion: ", bisecc[0], "Falsa posicion: ", falsa[0], "Newton: ", new[0])
-datos = [["Biseccion", bisecc[0], bisecc[1]], 
-         ["Falsa posicion", falsa[0], falsa[1]],
-         ["Newton", new[0], new[1]]]
+data = []
 
-
-d = pd.DataFrame(data=datos, columns=['Método', 'Resultado', 'Iteraciones'])
-print(d)
+for i in range(0, len(bisecc[2])):
+    data.append(bisecc[2][i])
+    
+print(data)
