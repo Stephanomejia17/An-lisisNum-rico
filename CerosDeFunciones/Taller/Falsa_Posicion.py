@@ -7,7 +7,6 @@ def Falsa_posicion(f, a, b, tol, particiones = 0):
         return 
         
     else:
-        print("Buscando")
         i=0
         p = b - f(b) * (a-b) /(f(a)- f(b))
         while (abs(f(p)) > tol):
