@@ -52,6 +52,8 @@ C_total=lambda t: (A * t * np.exp(-t / 3)) + (0.75 * A) * (t - tiempo2[0]) * np.
 u_x = np.linspace(15, 25, 1000)
 Bisecc=Biseccion(C_total, 18, 25, 1e-6)
 plt.plot(u_x, C_total(u_x))
+plt.xlabel('t')
+plt.ylabel('C_total(t)')
 plt.axhline(0, color='black', linestyle='--')
 plt.show()
 print("Se debera aplicar la tercera dosis a las ", Bisecc[0], "horas")
