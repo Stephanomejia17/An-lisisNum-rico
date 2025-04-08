@@ -18,4 +18,4 @@ plt.ylabel('f(w)')
 plt.show()
 
 Bisec=Biseccion(f,0,np.pi,1e-6)
-print("w =", Bisec[0]*180/np.pi)
+print("w =", Bisec[0]*180/np.pi, "grados")

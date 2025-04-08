@@ -8,7 +8,7 @@ t = sp.symbols('t')
 C = 1
 A = sp.symbols('A')
 
-h =t * sp.exp(-t / 3) #borre A
+h =t * sp.exp(-t / 3)
 
 derivada_h = sp.diff(h, t)
 print(f"Derivada: {derivada_h}")

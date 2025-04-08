@@ -34,7 +34,7 @@ bisecc = Biseccion(f,0,0.5,tol)
 falsa = Falsa_posicion(f, 0, 0.5, tol)
 
 
-print(np.degrees(bisecc[0]))
-print(np.degrees(falsa[0]))
+print("Biseccion: ", np.degrees(bisecc[0]))
+print("Falsa Posicion: ", np.degrees(falsa[0]))
 
 print(f"El ángulo A del anillo corresponde a {np.degrees(bisecc[0])}")
