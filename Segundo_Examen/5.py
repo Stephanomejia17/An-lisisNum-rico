@@ -13,6 +13,8 @@ tol = 1e-6
 f = ((r**2 * sp.acos((r-h)/r) - (r - h * sp.sqrt(2*r*h - h**2))) * L )- V
 a, b, res = Secante(f, h, 1, 1.2, tol)
 
+print(res)
+
 print("h2: ", res[1])
 print("El valor aproximado de h es: ", a)
 
