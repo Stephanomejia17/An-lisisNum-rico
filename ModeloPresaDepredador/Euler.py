@@ -5,7 +5,7 @@ def euler (f, a, b, h, yo):
     n = int((b-a) /h)
     for i in range(n):
         weu.append(weu[i]+h*f(a+i*h, weu[i]))
-    return weu
+    return  np.linspace(a, b, n+1), weu
 
 def f (t, u):
     #u=arreglo de variables u=[w,z] es decir que f(t, [w,z])
@@ -24,4 +24,4 @@ h=0.25
 y0=0"""
 
 
-print(euler(f, 0, 1, 0.25, [0,0]))
+# print(euler(f, 0, 1, 0.25, [0,0]))
