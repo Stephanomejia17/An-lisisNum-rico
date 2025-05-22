@@ -26,7 +26,7 @@ b = np.array(Modelo)[:, 1]
 Modelo = np.array(Modelo)
 tiempo = np.linspace(0, 10, len(Modelo))
 
-print(max(a))
+print("Valor más grande de theta: ", max(a))
 
 plt.plot(tiempo, a, label='a')
 # plt.plot(tiempo, b, label='b')
