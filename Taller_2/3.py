@@ -9,7 +9,7 @@ gamma = 1.4
 a = 10
 
 A = 2.5
-h = 1e-7
+h = 1e-5
 t_max = 1
 
 R_0 = A*Ro
@@ -73,21 +73,21 @@ tiempo, Modelo = Runge_Kutta_4.runge_kutta_4(f_c, 0, t_max, h, [R_0, R_prima_0])
 w_runge = np.array(Modelo)[:, 0]
 z_runge = np.array(Modelo)[:, 1]
 
-plt.subplot(2, 3, 3)
+plt.subplot(2, 3, 4)
 plt.plot(tiempo, w_runge, 'b', label='Radio vs Tiempo')
 plt.title("Radio vs Tiempo (Runge-Kutta 4)")
 plt.xlabel("Tiempo")
 plt.ylabel("Radio")
 plt.grid(True)
 
-plt.subplot(2, 3, 4)
+plt.subplot(2, 3, 5)
 plt.plot(tiempo, z_euler, 'r', label='Radio` vs Tiempo')
 plt.title("Radio' vs Tiempo (Runge-Kutta 4)")
 plt.xlabel("Tiempo")
 plt.ylabel("Radio'")
 plt.grid(True)
 
-plt.subplot(2, 3, 5)
+plt.subplot(2, 3, 3)
 plt.plot(w_euler, z_euler, 'g', label='Radio vs Radio` (Euler)')
 plt.title("Radio vs Radio` (Euler)")
 plt.xlabel("Radio")
